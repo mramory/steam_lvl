@@ -1,15 +1,21 @@
 import s from "./Header.module.scss"
 import logo from "../../assets/logo.svg"
 import main_page_btn from "../../assets/main_page_btn.svg"
+import { useState } from "react"
 
 export const Header = () => {
+
+    const [active, setActive] = useState()
+
     return (
-      <div className={s.wrapper}>
-        <div className={s.logo}>
+      <div className={s.background}>
+      <div className={"container " + s.wrapper}>
+        <button style={{cursor: "pointer"}}><div className={s.logo}>
           <img src={logo}></img>
         </div>
+        </button>
         <div className={s.btns}>
-          <div>
+          <div onClick={() => setActive("lvl")} className={active === "lvl"?s.active:null}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 50 50"
@@ -34,7 +40,7 @@ export const Header = () => {
             </svg>
             <span>Level Up</span>
           </div>
-          <div>
+          <div onClick={() => setActive("sell")} className={active === "sell"?s.active:null}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 50 50"
@@ -64,7 +70,7 @@ export const Header = () => {
             </svg>
             <span>Sell</span>
           </div>
-          <div>
+          <div className={s.login}>
             <button className={s.login_btn}>
               <svg
                 version="1.1"
@@ -98,6 +104,7 @@ export const Header = () => {
             </button>
           </div>
         </div>
+      </div>
       </div>
     );
 }

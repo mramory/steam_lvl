@@ -1,7 +1,16 @@
 @use "../../styles/vars" as v;
 
+.background{
+    padding-top: 5px;
+    background-color: v.$back_color2;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+}
+
 .wrapper{
     height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo{
@@ -17,8 +26,56 @@
     height: 30px
 }
 
+.login{
+
+    svg{
+        fill: #fff
+    }
+}
+
 .login_btn{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    padding: 0 30px;
+    padding: 5px 30px;
     background-color: v.$accent_color;
+}
+
+.btns{
+
+    display: flex;
+    align-items: center;
+
+    div:not(:last-child){
+        padding: 17px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+
+        span{
+            margin-left: 12px;
+        }
+    }
+
+    div:not(:last-child){
+        margin-right: 40px;
+    }
+}
+
+.active{
+    position: relative;
+
+    &:after{
+        opacity: 0.4;
+        position: absolute;
+        bottom: 0;
+        left: -15%;
+        display: block;
+        height: 2px;
+        width: 130%;
+        background-color: #fff;
+        content: "";
+    }
 }

@@ -1,9 +1,14 @@
+import { Footer } from "../../components/Footer/Footer"
 import { Header } from "../../components/Header/Header"
 
 export const MainPage = () => {
     return(
-        <div className="container">
+        <>
             <Header />
-        </div>
+            <div style={{margin: "100px"}}>
+
+            </div>
+            <Footer />
+        </>
     )
 }

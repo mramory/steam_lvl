@@ -1,0 +1,88 @@
+@use "../../styles/vars" as v;
+
+.background{
+    padding-top: 5px;
+    background-color: v.$back_color2;
+}
+
+.wrapper{
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social{
+    
+    display: flex;
+    align-items: center;
+
+    svg{  
+        cursor: pointer;       
+        fill: #fff;
+        opacity: 0.3;
+        width: 30px;
+        transition: opacity 0.3s;
+
+        &:hover{
+            opacity: 1;
+            transition: 0s;
+        }
+    }
+
+    div:not(:last-child){
+        margin-right: 30px;
+    }
+
+    .discord{
+        width: 38px;
+        height: 38px;
+    }
+    
+}
+
+.rules{
+
+    display: flex;
+    align-items: center;
+
+    span{
+        cursor: pointer;
+        opacity: 0.3;
+        transition: opacity 0.3s;
+
+        &:hover{
+            opacity: 1;
+            transition: 0s;
+        }
+
+    }
+
+    i{
+        margin: 0 7px;
+        opacity: 0.3;
+        background-color: #fff;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+    }
+
+    svg{
+        cursor: pointer;
+        margin-right: 30px;
+        fill: #fff;
+        opacity: 0.3;
+        width: 55px;
+        transition: opacity 0.3s;
+
+        &:hover{
+            opacity: 1;
+            transition: 0s;
+        }
+    }
+}
+
+.rules_links{
+    display: flex;
+    align-items: center;
+}
