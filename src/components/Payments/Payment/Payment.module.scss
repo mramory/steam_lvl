@@ -1,0 +1,42 @@
+@use "../../../styles/vars" as v;
+
+
+svg{
+    width: 58px;
+    height: 58px;
+    fill: v.$accent_color
+}
+
+.wrapper{
+    cursor: pointer;
+    width: calc(33% - 36px);
+    height: 130px;
+    border-radius: 6px;
+    margin: 19px;
+    padding: 36px 100px 36px 30px;
+    outline: 2px solid rgba(97,102,109,.16);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+
+
+    &:hover{
+        transition: 0s;
+        background-color: v.$back_color2;
+        outline: 12px solid v.$back_color2;
+        border: 1px solid #000;
+    }
+    .text{
+        margin-left: 16px;
+    }
+
+    p{
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: v.$accent_color;
+    }
+
+    span{
+        font-size: 22px;
+    }
+}

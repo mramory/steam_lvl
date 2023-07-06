@@ -22,8 +22,9 @@
 }
 
 .main_page_btn{
-    fill: v.$accent_color;
-    height: 30px
+    fill: #fff;
+    height: 30px;
+    width: 30px;
 }
 
 .login{
@@ -40,6 +41,16 @@
     cursor: pointer;
     padding: 5px 30px;
     background-color: v.$accent_color;
+
+    span{
+        font-family: v.$lato;
+        margin-left: 10px;
+    }
+
+    svg{
+        width: 26px;
+        height: 26px;
+    }
 }
 
 .btns{
@@ -77,5 +88,9 @@
         width: 130%;
         background-color: #fff;
         content: "";
+    }
+
+    svg{
+        fill: v.$accent_color;
     }
 }

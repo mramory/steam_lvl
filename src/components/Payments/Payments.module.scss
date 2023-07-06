@@ -1,0 +1,55 @@
+@use "../../styles/vars" as v;
+
+
+.wrapper{
+    margin-top: 54px;
+}
+
+.label{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    svg{
+        height: 15px;
+        width: 15px;
+        fill: #fff;
+    }
+
+    span{
+        margin-left: 5px;
+        font-family: v.$lato;
+    }
+    div{
+        margin-top: 3px;
+        opacity: 0.3;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:after{
+            position: absolute;
+            bottom: -3px;
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            content: "";
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+    h2{
+        margin-right: 15px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.payments{
+    max-width: 892px;
+    display: flex;
+    flex-wrap: wrap;
+}

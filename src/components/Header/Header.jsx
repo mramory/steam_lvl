@@ -1,6 +1,5 @@
 import s from "./Header.module.scss"
 import logo from "../../assets/logo.svg"
-import main_page_btn from "../../assets/main_page_btn.svg"
 import { useState } from "react"
 
 export const Header = () => {

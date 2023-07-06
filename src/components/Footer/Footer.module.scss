@@ -1,7 +1,10 @@
 @use "../../styles/vars" as v;
 
 .background{
-    padding-top: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 7px 0;
     background-color: v.$back_color2;
 }
 
