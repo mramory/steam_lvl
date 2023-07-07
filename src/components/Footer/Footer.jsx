@@ -54,7 +54,6 @@ export const Footer = () => {
           </div>
           <div>
             <svg
-              class="icon align headersvg"
               viewBox="0 0 24 24"
               className={s.discord}
             >
@@ -103,7 +102,6 @@ export const Footer = () => {
               <rect
                 x="0"
                 y="16.5"
-                class="st1"
                 width="33.5"
                 height="33.5"
               ></rect>

@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
 import s from "./Calculator.module.scss";
 
 export const Calculator = () => {
+
+  const level = useSelector(state => state.user.level)
+
   return (
     <div>
       <div className={s.label}>
@@ -34,7 +38,7 @@ export const Calculator = () => {
         <div className={s.row}>
           <div className={s.your}>
             <h3>Your Steam Level</h3>
-            <input placeholder="0"></input>
+            <input placeholder="0" value={level} disabled={level?true:false}></input>
           </div>
           <div className={s.arrow}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -50,7 +54,7 @@ export const Calculator = () => {
               <span>+100</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
                   version="1.1"
                   x="0px"
                   y="0px"

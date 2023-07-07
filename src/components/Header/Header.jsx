@@ -1,10 +1,16 @@
 import s from "./Header.module.scss"
 import logo from "../../assets/logo.svg"
 import { useState } from "react"
+import axios from "axios"
 
 export const Header = () => {
 
     const [active, setActive] = useState()
+
+    const LogIn = () => {
+      window.location.href = "https://steamcommunity.com/openid/login?openid.ns=http://specs.openid.net/auth/2.0&openid.mode=checkid_setup&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.return_to=http://localhost:5173"
+      
+    }
 
     return (
       <div className={s.background}>
@@ -70,18 +76,18 @@ export const Header = () => {
             <span>Sell</span>
           </div>
           <div className={s.login}>
-            <button className={s.login_btn}>
+            <button onClick={LogIn} className={s.login_btn}>
               <svg
                 version="1.1"
                 id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
                 x="0px"
                 y="0px"
                 viewBox="0 0 50 50"
                 width="26px"
                 height="26px"
-                xml:space="preserve"
+                xmlSpace="preserve"
               >
                 <g>
                   <path
