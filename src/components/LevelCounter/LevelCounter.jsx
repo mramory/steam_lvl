@@ -1,11 +1,15 @@
+import { useSelector } from "react-redux"
 import s from "./LevelCounter.module.scss"
 
-export const LevelCounter = () => {
+export const LevelCounter = (props) => {
+
+    const level = useSelector(state => state.user.level)
+
     return(
         <div className={s.wrapper}>
             <div className={s.level}>
                 <p>Level</p>
-                <span>0</span>
+                <span>{props.dreamLvl?props.dreamLvl>level?props.dreamLvl:level:level}</span>
             </div>
             <div className={s.needs}>
                 <div>

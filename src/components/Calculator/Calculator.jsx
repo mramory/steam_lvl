@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import s from "./Calculator.module.scss";
 
-export const Calculator = () => {
+export const Calculator = (props) => {
 
   const level = useSelector(state => state.user.level)
 
@@ -47,7 +47,7 @@ export const Calculator = () => {
           </div>
           <div className={s.dream}>
             <h3>Dream Steam Level</h3>
-            <input placeholder="0"></input>
+            <input onChange={e => props.setDreamLvl(e.target.value)} placeholder={level?level:"0"}></input>
             <div className={s.shortcuts}>
               <span>+1</span>
               <span>+10</span>
