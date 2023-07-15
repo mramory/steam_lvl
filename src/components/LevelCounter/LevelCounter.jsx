@@ -1,9 +1,12 @@
 import { useSelector } from "react-redux"
 import s from "./LevelCounter.module.scss"
+import { getXpNeeded } from "../../utils/levelCalculations/xpNeeded"
 
 export const LevelCounter = (props) => {
 
     const level = useSelector(state => state.user.level)
+
+    const xpNeeded = getXpNeeded(level, props.dreamLvl)
 
     return(
         <div className={s.wrapper}>
@@ -14,11 +17,11 @@ export const LevelCounter = (props) => {
             <div className={s.needs}>
                 <div>
                     <p>Sets Needed</p>
-                    <span>0</span>
+                    <span>{xpNeeded/100}</span>
                 </div>
                 <div>
                     <p>XP Needed</p>
-                    <span>0</span>
+                    <span>{xpNeeded}</span>
                 </div>
             </div>
         </div>

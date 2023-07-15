@@ -30,7 +30,7 @@ export const MainPage = (props) => {
             </div>
             <div className={s.level}>
               <LevelCounter dreamLvl={dreamLvl} />
-              <WillGet />
+              <WillGet dreamLvl={dreamLvl} />
             </div>
           </div>
         )}

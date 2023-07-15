@@ -27,7 +27,9 @@ function App() {
         instanse.get(`getUserInfo?id=${id}`)
         .then(res =>{
           dispatch(setUserInfo({name: res.data.players[0].personaname, avatar: res.data.players[0].avatarfull}))
-        })
+        }),
+        instanse.get("getUserStats")
+        .then(res => console.log(res.data))
       ])
       .then(res =>{
         dispatch(setIsAuth())
